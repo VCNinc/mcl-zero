@@ -1,0 +1,32 @@
+@import "index";
+
+.jumbotron .container {
+	position: relative;
+}
+
+.filter {
+	position: absolute;
+	right: 15px;
+	bottom: -1rem;
+	width: 380px;
+}
+
+.card-img {
+    height: 200px;
+	background: $grey;
+	padding: 40px;
+	position: relative;
+}
+
+.card-img img {
+	max-width: 100%;
+	max-height: 100%;
+	padding: 40px;
+	@include center;
+}
+
+.tags {
+	display: block;
+    height: 96px;
+	overflow-y: auto;
+}

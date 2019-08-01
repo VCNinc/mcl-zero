@@ -1,0 +1,49 @@
+@import "index";
+$image-width: 300px;
+
+@mixin arrow {
+	@include center;
+	font-size: 32px;
+	color: $grey;
+	transform: translateY(-50%);
+}
+
+.card-image {
+	@include center;
+
+	.card-body {
+    	padding-left: $image-width + 20px;
+
+    	.image-left {
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: $image-width;
+			background: $grey;
+
+			img {
+				max-width: 100%;
+				max-height: 100%;
+				padding: 40px;
+				@include center;
+			}
+    	}
+	}
+
+	.arrow-left {
+		@include arrow;
+		left: -50px;
+	}
+
+	.arrow-right {
+		@include arrow;
+		left: unset;
+		right: -50px;
+	}
+}
+
+.container.full-height {
+	height: 100vh;
+	margin-top: -56px;
+}
